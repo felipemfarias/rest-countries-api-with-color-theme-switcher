@@ -1,0 +1,28 @@
+.country-list-container {
+  margin: 0 -16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  .country-search {
+    .search-container {
+      padding: 16px;
+      background-color: #fff;
+
+      input {
+        background: transparent;
+        border: 0;
+      }
+    }
+  }
+
+  .country-filter {
+    .filter-container {
+      padding: 16px;
+      background-color: #fff;
+    }
+  }
+}
