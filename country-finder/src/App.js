@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.scss";
-import CountryList from "../countryList";
+import Header from "./components/header";
+import Main from "./components/main";
 
-class Main extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,11 +38,12 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <CountryList countries={this.state.countries} />
-      </div>
+      <>
+        <Header />
+        <Main />
+      </>
     );
   }
 }
 
-export default Main;
+export default App;

@@ -13,6 +13,9 @@
       background-color: #fff;
 
       input {
+        width: 300px;
+        padding: 4px;
+        height: 32px;
         background: transparent;
         border: 0;
       }
@@ -23,6 +26,11 @@
     .filter-container {
       padding: 16px;
       background-color: #fff;
+
+      select {
+        padding: 4px;
+        height: 32px;
+      }
     }
   }
 }

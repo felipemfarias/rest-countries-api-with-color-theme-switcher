@@ -10,9 +10,16 @@ const CountryCard = (props) => {
       ></div>
       <div className="country-info">
         <div className="title">{props.name}</div>
-        <div className="item">Population: {props.population}</div>
-        <div className="item">Region: {props.region}</div>
-        <div className="item">Capital: {props.capital}</div>
+        <div className="item">
+          <span className="item-label">Population:</span>{" "}
+          {Number(props.population).toLocaleString()}
+        </div>
+        <div className="item">
+          <span className="item-label">Region:</span> {props.region}
+        </div>
+        <div className="item">
+          <span className="item-label">Capital:</span> {props.capital}
+        </div>
       </div>
     </div>
   );

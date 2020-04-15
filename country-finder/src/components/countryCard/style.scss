@@ -19,6 +19,13 @@
   }
   .country-info {
     padding: 24px;
+
+    .item {
+      line-height: 32px;
+      .item-label {
+        font-weight: 600;
+      }
+    }
   }
   @media (min-width: 600px) {
     width: 336px;
