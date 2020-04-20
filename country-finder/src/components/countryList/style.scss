@@ -3,34 +3,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.search-filter {
-  display: flex;
-  justify-content: space-between;
-  .country-search {
-    .search-container {
-      padding: 16px;
-      background-color: #fff;
-
-      input {
-        width: 300px;
-        padding: 4px;
-        height: 32px;
-        background: transparent;
-        border: 0;
-      }
-    }
-  }
-
-  .country-filter {
-    .filter-container {
-      padding: 16px;
-      background-color: #fff;
-
-      select {
-        padding: 4px;
-        height: 32px;
-      }
-    }
-  }
-}

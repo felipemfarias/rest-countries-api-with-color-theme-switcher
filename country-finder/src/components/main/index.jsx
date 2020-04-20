@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.scss";
+import CountrySearch from "../countrySearch";
 import CountryList from "../countryList";
+import CountryFilter from "../countryFilter";
 
 class Main extends React.Component {
   constructor(props) {
@@ -9,7 +11,22 @@ class Main extends React.Component {
       error: null,
       isLoaded: false,
       countries: [],
+      filter: "",
+      search: "",
     };
+
+    this.HandleSearch = this.HandleSearch.bind(this);
+    this.HandleFilter = this.HandleFilter.bind(this);
+  }
+
+  HandleSearch(event) {
+    this.setState({ search: event.target.value });
+    console.log(this.state.search);
+  }
+
+  HandleFilter(event) {
+    this.setState({ filter: event.target.value });
+    console.log(this.state.filter);
   }
 
   componentDidMount() {
@@ -38,7 +55,15 @@ class Main extends React.Component {
   render() {
     return (
       <div className="container">
-        <CountryList countries={this.state.countries} />
+        <div className="search-filter">
+          <CountrySearch HandleChange={this.HandleSearch} />
+          <CountryFilter HandleChange={this.HandleFilter} />
+        </div>
+        <CountryList
+          countries={this.state.countries}
+          search={this.state.search}
+          filter={this.state.filter}
+        />
       </div>
     );
   }

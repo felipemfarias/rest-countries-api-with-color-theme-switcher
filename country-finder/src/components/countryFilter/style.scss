@@ -1,0 +1,23 @@
+.country-filter {
+  .filter-container {
+    padding: 16px;
+    background-color: #fff;
+    position: relative;
+
+    select {
+      padding: 4px;
+      height: 32px;
+      appearance: none;
+      border: none;
+      padding-right: 32px;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 600;
+    }
+
+    .icon {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+  }
+}

@@ -8,5 +8,10 @@ body {
 .container {
   max-width: 1440px;
   margin: auto;
-  padding: 32px;
+  padding: 16px 32px;
+}
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
 }
