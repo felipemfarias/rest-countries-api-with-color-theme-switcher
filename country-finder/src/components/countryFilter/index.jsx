@@ -9,7 +9,7 @@ const CountryFilter = (props) => {
     { value: "americas", label: "Americas" },
     { value: "africa", label: "Africa" },
     { value: "asia", label: "Asia" },
-    { value: "europe", label: "Europa" },
+    { value: "europe", label: "Europe" },
     { value: "oceania", label: "Oceania" },
   ];
 
