@@ -1,17 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
-body {
-  font-family: "Nunito Sans", sans-serif;
-  text-align: left;
-}
-
-.container {
-  max-width: 1440px;
-  margin: auto;
-  padding: 16px 32px;
-}
-
 .search-filter {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }

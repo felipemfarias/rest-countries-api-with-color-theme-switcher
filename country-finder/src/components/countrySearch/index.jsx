@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
-const CountrySearch = (props) => {
+const CountrySearch = ({ HandleSearch }) => {
   return (
     <div className="country-search">
       <div className="search-container">
@@ -12,8 +12,7 @@ const CountrySearch = (props) => {
           type="search"
           name="country"
           placeholder="Search for a country"
-          value={props.value}
-          onChange={props.HandleChange}
+          onChange={HandleSearch}
         />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
-const CountryFilter = (props) => {
+const CountryFilter = ({ HandleFilter }) => {
   const options = [
     { value: "", label: "Filter by region" },
     { value: "americas", label: "Americas" },
@@ -16,7 +16,7 @@ const CountryFilter = (props) => {
   return (
     <div className="country-filter">
       <div className="filter-container">
-        <select onChange={props.HandleChange}>
+        <select onChange={HandleFilter}>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}

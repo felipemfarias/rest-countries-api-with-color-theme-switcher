@@ -3,9 +3,12 @@ body {
   background-color: hsl(0, 0%, 98%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 16px 32px;
 }
