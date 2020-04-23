@@ -15,6 +15,9 @@ const CountryPage = ({ countries }) => {
           <Button url={item3.alpha3Code} label={item3.name} />
         </li>
       ));
+    if (countryButtons.length == 0) {
+      return "This country doesn't have borders with other countries";
+    }
     return countryButtons;
   };
 
@@ -38,7 +41,7 @@ const CountryPage = ({ countries }) => {
               </div>
               <div className="item">
                 <span className="label">Population: </span>
-                {country.population}{" "}
+                {country.population.toLocaleString()}
               </div>
               <div className="item">
                 <span className="label">Region: </span>
