@@ -1,0 +1,59 @@
+.country-filter {
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    position: relative;
+    select {
+      padding: 4px;
+      height: 32px;
+      appearance: none;
+      border: none;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 600;
+      width: 100%;
+      background: transparent;
+    }
+
+    .icon {
+      position: absolute;
+      right: 12px;
+    }
+    @media (min-width: 600px) {
+      width: auto;
+      padding: 16px;
+
+      select {
+        padding-right: 32px;
+      }
+
+      .icon {
+        right: 24px;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .filter-container {
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+
+    select {
+      color: hsl(0, 0%, 100%);
+    }
+  }
+}
+
+.light-theme {
+  .filter-container {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+
+    select {
+      color: hsl(200, 15%, 8%);
+    }
+  }
+}
