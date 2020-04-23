@@ -2,4 +2,4 @@
 
 Page built based on challenge from Frontend Mentor (https://www.frontendmentor.io)
 
-Preview link: Coming soon!
+Preview link: (https://rest-countries-api-with-color-theme-switcher-5qs8zkn3k.now.sh)!
