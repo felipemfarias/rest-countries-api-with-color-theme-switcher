@@ -1,12 +1,25 @@
 body {
   margin: 0;
-  background-color: hsl(0, 0%, 98%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Nunito Sans", sans-serif;
   text-align: left;
+  height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+.dark-theme {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+.light-theme {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
 .container {
   max-width: 1440px;
   margin: auto;

@@ -1,8 +1,12 @@
-.country-info {
+.country {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 16px;
+
+  @media (min-width: 600px) {
+    margin-top: 100px;
+  }
   .flag {
     width: 100%;
     @media (min-width: 600px) {

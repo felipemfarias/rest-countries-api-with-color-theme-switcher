@@ -1,5 +1,9 @@
 .country-list-container {
-  margin: 0 -16px;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
+
+  @media (min-width: 600px) {
+    margin: 0 -16px;
+  }
 }

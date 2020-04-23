@@ -10,9 +10,9 @@ const CountryPage = ({ countries }) => {
   const ShowBorderCountries = () => {
     const countryButtons = country.borders
       .map((item) => countries.find((item2) => item2.alpha3Code === item))
-      .map((item) => (
-        <li className="border-country">
-          <Button url={item.alpha3Code} label={item.name} />
+      .map((item3) => (
+        <li key={item3.alpha3Code} className="border-country">
+          <Button url={item3.alpha3Code} label={item3.name} />
         </li>
       ));
     return countryButtons;
@@ -24,9 +24,9 @@ const CountryPage = ({ countries }) => {
   return (
     <div className="country-page">
       <Button label="Go back" url="/" />
-      <div className="country-info">
+      <div className="country">
         <div className="flag">
-          <img src={country.flag} />
+          <img src={country.flag} alt={country.name} />
         </div>
         <div className="info">
           <h1>{country.name}</h1>
@@ -63,7 +63,7 @@ const CountryPage = ({ countries }) => {
                 {country.currencies.map(
                   (item, index) =>
                     item.name +
-                    (country.currencies.length == index + 1 ? "" : ", ")
+                    (country.currencies.length === index + 1 ? "" : ", ")
                 )}
               </div>
               <div className="item">
@@ -71,7 +71,7 @@ const CountryPage = ({ countries }) => {
                 {country.languages.map(
                   (item, index) =>
                     item.name +
-                    (country.languages.length == index + 1 ? "" : ", ")
+                    (country.languages.length === index + 1 ? "" : ", ")
                 )}
               </div>
             </div>

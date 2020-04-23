@@ -14,20 +14,31 @@ class App extends React.Component {
       countries: [],
       filter: "",
       search: "",
+      darkMode: false,
     };
-
+    this.toggleDarkMode = this.toggleDarkMode.bind(this);
     this.HandleSearch = this.HandleSearch.bind(this);
     this.HandleFilter = this.HandleFilter.bind(this);
   }
 
+  toggleDarkMode() {
+    this.setState({ darkMode: !this.state.darkMode });
+    let body = document.querySelector("body");
+    if (!this.state.darkMode) {
+      body.classList.remove("light-theme");
+      body.classList.add("dark-theme");
+    } else {
+      body.classList.remove("dark-theme");
+      body.classList.add("light-theme");
+    }
+  }
+
   HandleSearch(event) {
     this.setState({ search: event.target.value });
-    console.log(this.state.search);
   }
 
   HandleFilter(event) {
     this.setState({ filter: event.target.value });
-    console.log(this.state.filter);
   }
 
   componentDidMount() {
@@ -56,7 +67,10 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Header />
+        <Header
+          HandleClick={this.toggleDarkMode}
+          isDarkMode={this.state.darkMode}
+        />
         <div className="container">
           <Switch>
             <Route exact path="/">
