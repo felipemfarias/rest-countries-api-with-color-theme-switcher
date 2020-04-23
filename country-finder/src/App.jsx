@@ -34,7 +34,8 @@ class App extends React.Component {
   }
 
   HandleSearch(event) {
-    this.setState({ search: event.target.value });
+    const searchString = event.target.value.toLowerCase();
+    this.setState({ search: searchString });
   }
 
   HandleFilter(event) {
